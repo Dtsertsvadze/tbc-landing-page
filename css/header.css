@@ -1,9 +1,12 @@
 header {
   position: fixed;
   width: 100%;
-  background-color: #f8f9fa;
   z-index: 1000;
+  
   .header-container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -13,6 +16,9 @@ header {
   }
   .logo img {
     height: 40px;
+  }
+  .logo-responsive {
+    display: none;
   }
   .main-nav {
     display: flex;
@@ -48,7 +54,6 @@ header {
     align-items: center;
     &.link {
       display: flex;
-      gap: 6px;
       align-items: center;
       color: rgb(24, 44, 192);
       font-size: 0.9rem;
@@ -190,7 +195,35 @@ header {
 }
 
 @media (max-width: 1000px) {
+  .main-nav {
+    display: none !important;
+  }
   .nav-content {
     display: none !important;
+  }
+  .language-selector{
+    display: none !important;
+  }
+  .burger-content{
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .logo-responsive{
+    display: block !important;
+  }
+  .logo{
+    display: none !important;
+  }
+  .header-container{
+    width: 90%;
+  }
+  .header-actions {
+    &.link {
+      font-size: 0.7rem !important;
+      display: flex;
+    }
   }
 }

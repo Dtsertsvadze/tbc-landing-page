@@ -1,5 +1,4 @@
 function setupNavContent() {
-  const contentDiv = document.getElementById("nav-content");
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach((link) => {
@@ -7,63 +6,47 @@ function setupNavContent() {
   });
 
   document.addEventListener("click", handleOutsideClick);
-  setupResizeListener();
 }
 
 function handleNavLinkClick(e) {
   e.preventDefault();
   const contentDiv = document.getElementById("nav-content");
-  const isCurrentlyActive = this.classList.contains('active');
+  const isCurrentlyActive = this.classList.contains("active");
 
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(l => l.classList.remove('active'));
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((l) => l.classList.remove("active"));
 
   if (isCurrentlyActive) {
     closeContent(contentDiv);
   } else {
-    this.classList.add('active');
+    this.classList.add("active");
     openContent(contentDiv);
-    contentDiv.innerHTML = generateContent(this.getAttribute('data-content'));
+    contentDiv.innerHTML = generateContent(this.getAttribute("data-content"));
   }
 }
 
 function handleOutsideClick(e) {
   const contentDiv = document.getElementById("nav-content");
-  const navLinks = document.querySelectorAll('.nav-link');
-  if (!e.target.closest('.nav-link') && !e.target.closest('#nav-content')) {
+  const navLinks = document.querySelectorAll(".nav-link");
+  if (!e.target.closest(".nav-link") && !e.target.closest("#nav-content")) {
     closeContent(contentDiv);
     navLinks.forEach((l) => l.classList.remove("active"));
   }
 }
 
-function setupResizeListener() {
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      if (window.innerWidth <= 1000) {
-        const contentDiv = document.getElementById("nav-content");
-        const navLinks = document.querySelectorAll(".nav-link");
-        closeContent(contentDiv);
-        navLinks.forEach((l) => l.classList.remove("active"));
-      }
-    }, 250);
-  });
-}
-
 function openContent(contentDiv) {
-  contentDiv.classList.add('active');
-  contentDiv.style.display = 'block';
+  contentDiv.classList.add("active");
+  contentDiv.style.display = "block";
   setTimeout(() => {
-    contentDiv.style.opacity = '1';
-  }, 10); 
+    contentDiv.style.opacity = "1";
+  }, 10);
 }
 
 function closeContent(contentDiv) {
-  contentDiv.classList.remove('active');
-  contentDiv.style.opacity = '0';
+  contentDiv.classList.remove("active");
+  contentDiv.style.opacity = "0";
   setTimeout(() => {
-    contentDiv.style.display = 'none';
+    contentDiv.style.display = "none";
   }, 200);
 }
 
@@ -92,10 +75,10 @@ function generateContent(contentType) {
         </a>
       </div>
       <div class="nav-content-links">
-        ${data.links.map((link) => `<a href="#" class="content-link">${link}</a>`).join("")}
+        ${data.links
+          .map((link) => `<a href="#" class="content-link">${link}</a>`)
+          .join("")}
       </div>
     </div>
   `;
 }
-
-window.setupNavContent = setupNavContent;
