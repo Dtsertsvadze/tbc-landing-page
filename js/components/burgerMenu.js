@@ -78,24 +78,28 @@ const createBurgerMenu = () => {
       </nav>
     `;
   
-    const mainItems = burgerContent.querySelectorAll('.main-item');
+    const setupBurgerExpansion = () => {
+      const mainItems = burgerContent.querySelectorAll('.main-item');
   
-    mainItems.forEach(item => {
-      item.addEventListener('click', function() {
-        const subItems = this.nextElementSibling;
-        const expandIcon = this.querySelector('.expand-icon');
+      mainItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const subItems = this.nextElementSibling;
+          const expandIcon = this.querySelector('.expand-icon');
   
-        mainItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            const otherSubItems = otherItem.nextElementSibling;
-            const otherExpandIcon = otherItem.querySelector('.expand-icon');
-            otherSubItems.classList.remove('expanded');
-            otherExpandIcon.classList.remove('rotated');
-          }
+          mainItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              const otherSubItems = otherItem.nextElementSibling;
+              const otherExpandIcon = otherItem.querySelector('.expand-icon');
+              otherSubItems.classList.remove('expanded');
+              otherExpandIcon.classList.remove('rotated');
+            }
+          });
+  
+          subItems.classList.toggle('expanded');
+          expandIcon.classList.toggle('rotated');
         });
-  
-        subItems.classList.toggle('expanded');
-        expandIcon.classList.toggle('rotated');
       });
-    });
+    };
+
+    setupBurgerExpansion();
   };
