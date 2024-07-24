@@ -1,19 +1,16 @@
-const createHero = () => {
+function createHero() {
     const heroSection = document.getElementById("hero");
+
+    const bannerHtml = createBanner(
+        "assets/images/banner-img.webp",
+        "თიბისი კონცეპტი",
+        "პერსონალური საბანკო მომსახურება, მორგებული თქვენს საჭიროებებსა და ინტერესებზე",
+        "გამოიწერეთ"
+    );
 
     heroSection.innerHTML = `
         <div class="container">
-            <div class="banner">
-                <img class="banner-img" src="assets/images/banner-img.webp" alt="Hero Banner">
-                <div class="banner-content">
-                    <h1>თიბისი კონცეპტი</h1>
-                    <p>პერსონალური საბანკო მომსახურება, მორგებული თქვენს საჭიროებებსა და ინტერესებზე</p>
-                    <button>
-                        <i class="fa-solid fa-arrow-right"></i>
-                        გამოიწერეთ
-                    </button>
-                </div>
-            </div>
+            ${bannerHtml}
             <div class="hero-description">
                 <p>გამოიწერეთ თიბისი კონცეპტის ნაკრები და ისარგებლეთ როგორც საბანკო, ისე არასაბანკო უპირატესობებით.</p>
             </div>
@@ -33,5 +30,4 @@ const createHero = () => {
     handleContainerClass();
 
     window.addEventListener('resize', handleContainerClass);
-};
-
+}
