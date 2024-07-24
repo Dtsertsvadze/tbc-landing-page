@@ -46,7 +46,7 @@
   width: 50%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
   .burger-icon {
     display: block;
     cursor: pointer;

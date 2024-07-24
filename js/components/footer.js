@@ -23,18 +23,16 @@ const createFooter = () => {
                 <span class="expand-icon"><i class="fa-solid fa-angle-down"></i></span>
             </div>
             <div class="sub-items">
-                <a href="#">პროდუქტების მიმოხილვა</a>
                 <a href="#">ნაკრები</a>
                 <a href="#">პირადი ბანკირი</a>
             </div>
         </div>
         <div class="expandable-item">
             <div class="main-item">
-                <h3>შეთავაზებები</h3>
+                <h3>Lifestyle</h3>
                 <span class="expand-icon"><i class="fa-solid fa-angle-down"></i></span>
             </div>
             <div class="sub-items">
-                <a href="#">მიმოხილვა</a>
                 <a href="#">შეთავაზებები</a>
                 <a href="#">ღონისძიებები</a>
             </div>
@@ -45,10 +43,8 @@ const createFooter = () => {
                 <span class="expand-icon"><i class="fa-solid fa-angle-down"></i></span>
             </div>
             <div class="sub-items">
-                <a href="#">მიმოხილვა</a>
                 <a href="#">კაფე</a>
                 <a href="#">ბიბლიოთეკა</a>
-                <a href="#">კონცეპტ ფილიალები</a>
             </div>
         </div>
         <div class="footer-content">
