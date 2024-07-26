@@ -1,7 +1,7 @@
 const createBurgerMenu = () => {
-    const burgerContent = document.querySelector(".burger-content");
-  
-    burgerContent.innerHTML = `
+  const burgerContent = document.querySelector(".burger-content");
+
+  burgerContent.innerHTML = `
       <nav class="burger-nav">
         <div class="expandable-item">
           <div class="main-item">
@@ -77,29 +77,35 @@ const createBurgerMenu = () => {
         </div>
       </nav>
     `;
-  
-    const setupBurgerExpansion = () => {
-      const mainItems = burgerContent.querySelectorAll('.main-item');
-  
-      mainItems.forEach(item => {
-        item.addEventListener('click', function() {
-          const subItems = this.nextElementSibling;
-          const expandIcon = this.querySelector('.expand-icon');
-  
-          mainItems.forEach(otherItem => {
-            if (otherItem !== item) {
-              const otherSubItems = otherItem.nextElementSibling;
-              const otherExpandIcon = otherItem.querySelector('.expand-icon');
-              otherSubItems.classList.remove('expanded');
-              otherExpandIcon.classList.remove('rotated');
-            }
-          });
-  
-          subItems.classList.toggle('expanded');
-          expandIcon.classList.toggle('rotated');
-        });
-      });
-    };
 
-    setupBurgerExpansion();
+  const collapseOtherItems = (currentItem, mainItems) => {
+    mainItems.forEach((otherItem) => {
+      if (otherItem !== currentItem) {
+        const otherSubItems = otherItem.nextElementSibling;
+        const otherExpandIcon = otherItem.querySelector(".expand-icon");
+        otherSubItems.classList.remove("expanded");
+        otherExpandIcon.classList.remove("rotated");
+      }
+    });
   };
+
+  const toggleItem = (item) => {
+    const subItems = item.nextElementSibling;
+    const expandIcon = item.querySelector(".expand-icon");
+    subItems.classList.toggle("expanded");
+    expandIcon.classList.toggle("rotated");
+  };
+
+  const setupBurgerExpansion = () => {
+    const mainItems = burgerContent.querySelectorAll(".main-item");
+
+    mainItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        collapseOtherItems(this, mainItems);
+        toggleItem(this);
+      });
+    });
+  };
+
+  setupBurgerExpansion();
+};

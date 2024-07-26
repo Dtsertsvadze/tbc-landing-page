@@ -154,10 +154,10 @@
   color: grey;
 }
 
-@media (max-width: 747px) {
+@media (max-width: 767px) {
   #footer .footer-top {
     border-bottom: 1px solid #e0e0e0;
-    padding: 30px 20px 40px 20px;
+    padding: 40px 22px;
   }
 
   #footer .logo-responsive {
