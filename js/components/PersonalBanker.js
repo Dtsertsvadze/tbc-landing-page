@@ -11,6 +11,7 @@ function createPersonalBanker() {
         'გაიგე მეტი'
     );
 
+    
     container.innerHTML = heroBannerHtml;
 
     personalBankerSection.appendChild(container);

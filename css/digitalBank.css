@@ -1,0 +1,112 @@
+.digital-bank-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 300px;
+  padding: 40px;
+}
+
+.content-wrapper {
+  width: 550px;
+}
+
+.digital-bank-header {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.digital-bank-description {
+  margin-bottom: 20px;
+  color: #555f62;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.app-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.app-button:hover {
+  background-color: #e0e0e0;
+}
+
+.app-button-mobile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  border: 1px solid #182cc0;
+  color: #182cc0;
+  border-radius: 5px;
+  background-color: rgb(249, 250, 250);
+}
+
+.app-button svg,
+.app-button-mobile svg {
+  margin-right: 10px;
+}
+
+.image-wrapper {
+  width: 250px;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.digital-bank-image {
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 1029px) {
+  .digital-bank-description {
+    font-size: 14px;
+  }
+  .app-button-mobile {
+    transition: border 0.3s;
+  }
+  .app-button-mobile:hover {
+    border: 1px solid rgb(213, 215, 215);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767px) {
+  .digital-bank-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .digital-bank-header,
+  .digital-bank-description,
+  .button-wrapper {
+    width: 100%;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    padding-right: 0;
+    margin: 20px;
+  }
+
+  .button-wrapper {
+    justify-content: center;
+    button {
+      width: 100%;
+    }
+  }
+}
