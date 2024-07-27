@@ -15,10 +15,10 @@ function toggleBurgerMenu() {
   const burgerIcon = document.querySelector(".burger-icon");
   burgerIcon.classList.toggle("active");
   if (burgerIcon.classList.contains("active")) {
-    burgerContent.style.opacity = '1';
-    burgerContent.style.visibility = 'visible';
+    burgerContent.style.opacity = "1";
+    burgerContent.style.visibility = "visible";
   } else {
-    burgerContent.style.opacity = '0';
-    burgerContent.style.visibility = 'hidden';
+    burgerContent.style.opacity = "0";
+    burgerContent.style.visibility = "hidden";
   }
 }

@@ -1,5 +1,5 @@
 function createBanner(imgSrc, title, description, buttonText) {
-    return `
+  return `
         <div class="banner">
             <img class="banner-img" src="${imgSrc}" alt="Banner Image">
             <div class="banner-content">

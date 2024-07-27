@@ -52,13 +52,13 @@ function closeContent(contentDiv) {
 
 function generateContent(contentType) {
   const contentData = {
-    home: {
+    products: {
       links: ["პროდუქტების მიმოხილვა", "ნაკრები", "პირადი ბანკირი"],
     },
-    about: {
+    offers: {
       links: ["მიმოხილვა", "შეთავაზებები", "ღონისძიებები"],
     },
-    contact: {
+    concept: {
       links: ["კაფე", "ბიბლიოთეკა", "კონცეპტ ფილიალები"],
     },
   };

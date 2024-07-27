@@ -1,7 +1,7 @@
 const createBadges = () => {
-    const badges = document.getElementById('badges');
+  const badges = document.getElementById("badges");
 
-    badges.innerHTML = `
+  badges.innerHTML = `
         <div class="container">
             <div class="badge">
                 <h1>94 750</h1>

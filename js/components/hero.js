@@ -1,14 +1,14 @@
 function createHero() {
-    const heroSection = document.getElementById("hero");
+  const heroSection = document.getElementById("hero");
 
-    const bannerHtml = createBanner(
-        "assets/images/banner-img.webp",
-        "თიბისი კონცეპტი",
-        "პერსონალური საბანკო მომსახურება, მორგებული თქვენს საჭიროებებსა და ინტერესებზე",
-        "გამოიწერეთ"
-    );
+  const bannerHtml = createBanner(
+    "assets/images/banner-img.webp",
+    "თიბისი კონცეპტი",
+    "პერსონალური საბანკო მომსახურება, მორგებული თქვენს საჭიროებებსა და ინტერესებზე",
+    "გამოიწერეთ"
+  );
 
-    heroSection.innerHTML = `
+  heroSection.innerHTML = `
         <div class="container">
             ${bannerHtml}
             <div class="hero-description">
@@ -17,17 +17,17 @@ function createHero() {
         </div>
     `;
 
-    const handleContainerClass = () => {
-        const container = heroSection.querySelector('.container');
-        if (window.innerWidth <= 767) {
-            const content = container.innerHTML;
-            heroSection.innerHTML = content;
-        } else if (!heroSection.querySelector('.container')) {
-            heroSection.innerHTML = `<div class="container">${heroSection.innerHTML}</div>`;
-        }
-    };
+  const handleContainerClass = () => {
+    const container = heroSection.querySelector(".container");
+    if (window.innerWidth <= 767) {
+      const content = container.innerHTML;
+      heroSection.innerHTML = content;
+    } else if (!heroSection.querySelector(".container")) {
+      heroSection.innerHTML = `<div class="container">${heroSection.innerHTML}</div>`;
+    }
+  };
 
-    handleContainerClass();
+  handleContainerClass();
 
-    window.addEventListener('resize', handleContainerClass);
+  window.addEventListener("resize", handleContainerClass);
 }

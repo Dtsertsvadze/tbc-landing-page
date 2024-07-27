@@ -28,8 +28,9 @@ const createDigitalBank = () => {
     <h2 class="digital-bank-header">ციფრული ბანკი</h2>
     <p class="digital-bank-description">შეასრულეთ საბანკო ოპერაციები დისტანციურად, ციფრული ბანკის დახმარებით.</p>
     <div class="button-wrapper">
-      ${screenWidth >= 1030 
-        ? `<button class="app-button">
+      ${
+        screenWidth >= 1030
+          ? `<button class="app-button">
              ${googlePlayIcon}
              <span>Google Play</span>
            </button>
@@ -37,7 +38,7 @@ const createDigitalBank = () => {
              ${appStoreIcon}
              <span>App Store</span>
            </button>`
-        : `<button class="app-button-mobile">
+          : `<button class="app-button-mobile">
              ${downloadIcon}
              <span>Download</span>
            </button>`
@@ -47,9 +48,10 @@ const createDigitalBank = () => {
 
   const content = `
   <div class="digital-bank-container">
-    ${screenWidth > 767 
-      ? `<div class="content-wrapper">${contentWrapper}</div>${imageWrapper}`
-      : `<h2 class="digital-bank-header">ციფრული ბანკი</h2>
+    ${
+      screenWidth > 767
+        ? `<div class="content-wrapper">${contentWrapper}</div>${imageWrapper}`
+        : `<h2 class="digital-bank-header">ციფრული ბანკი</h2>
          ${imageWrapper}
          <p class="digital-bank-description">შეასრულეთ საბანკო ოპერაციები დისტანციურად, ციფრული ბანკის დახმარებით.</p>
          <div class="button-wrapper">
@@ -62,7 +64,7 @@ const createDigitalBank = () => {
   </div>
 `;
 
-digitalBank.innerHTML = content;
+  digitalBank.innerHTML = content;
 };
 
 window.addEventListener("load", createDigitalBank);

@@ -27,12 +27,26 @@ header {
     height: 100%;
     position: static;
     justify-content: center;
-    gap: 20px;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
     .nav-link {
       position: relative;
       text-decoration: none;
       color: #555f62;
       padding-bottom: 5px;
+
       &::after {
         content: "";
         position: absolute;
@@ -43,6 +57,7 @@ header {
         background-color: rgb(24, 44, 192);
         transition: none;
       }
+
       &.active::after {
         width: 100%;
         left: 0;
@@ -202,23 +217,22 @@ header {
   .nav-content {
     display: none !important;
   }
-  .language-selector{
+  .language-selector {
     display: none !important;
   }
-  .burger-content{
+  .burger-content {
     display: block !important;
   }
 }
 
 @media (max-width: 767px) {
-
-  .logo-responsive{
+  .logo-responsive {
     display: block !important;
   }
-  .logo{
+  .logo {
     display: none !important;
   }
-  .header-container{
+  .header-container {
     width: 90%;
   }
   .header-actions {

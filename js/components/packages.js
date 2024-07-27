@@ -1,7 +1,7 @@
 const createPackages = () => {
-    const packagesContainer = document.getElementById("packages");
-  
-    const content = `
+  const packagesContainer = document.getElementById("packages");
+
+  const content = `
       <div class="packages-container">
           <h2 class="packages-header">შეარჩიე ნაკრები</h2>
           <div class="packages-grid">
@@ -38,38 +38,38 @@ const createPackages = () => {
           </div>
       </div>
       `;
-  
-    packagesContainer.innerHTML = content;
-  
-    if (window.innerWidth <= 767) {
-      const packagesGrid = document.querySelector(".packages-grid");
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-  
-      packagesGrid.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX - packagesGrid.offsetLeft;
-        scrollLeft = packagesGrid.scrollLeft;
-      });
-  
-      packagesGrid.addEventListener("mouseleave", () => {
-        isDown = false;
-      });
-  
-      packagesGrid.addEventListener("mouseup", () => {
-        isDown = false;
-      });
-  
-      packagesGrid.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - packagesGrid.offsetLeft;
-        const walk = (x - startX) * 2;
-        packagesGrid.scrollLeft = scrollLeft - walk;
-      });
-    }
-  };
-  
-  window.addEventListener("load", createPackages);
-  window.addEventListener("resize", createPackages);
+
+  packagesContainer.innerHTML = content;
+
+  if (window.innerWidth <= 767) {
+    const packagesGrid = document.querySelector(".packages-grid");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    packagesGrid.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - packagesGrid.offsetLeft;
+      scrollLeft = packagesGrid.scrollLeft;
+    });
+
+    packagesGrid.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    packagesGrid.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    packagesGrid.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - packagesGrid.offsetLeft;
+      const walk = (x - startX) * 2;
+      packagesGrid.scrollLeft = scrollLeft - walk;
+    });
+  }
+};
+
+window.addEventListener("load", createPackages);
+window.addEventListener("resize", createPackages);
