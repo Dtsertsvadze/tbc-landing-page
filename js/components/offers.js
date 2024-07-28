@@ -58,7 +58,7 @@ const createOffers = () => {
               </div>
               <div class="offer-content">
                 <div class="offer-description">
-                  ${offer.description.map((desc) => `<p>${desc}</p>`).join("")}
+                  ${offer.description.map((desc) => `<div>${desc}</div>`).join("")}
                 </div>
                 <div class="offer-title">${offer.title}</div>
               </div>
