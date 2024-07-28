@@ -1,6 +1,6 @@
 const burgerContent = document.querySelector(".burger-content");
 
-function createBurgerIcon() {
+const createBurgerIcon = () => {
   const burgerIcon = document.querySelector(".burger-icon");
   burgerIcon.innerHTML = `
         <span class="line1"></span>
@@ -11,7 +11,7 @@ function createBurgerIcon() {
   burgerIcon.addEventListener("click", toggleBurgerMenu);
 }
 
-function toggleBurgerMenu() {
+const toggleBurgerMenu = () => {
   const burgerIcon = document.querySelector(".burger-icon");
   burgerIcon.classList.toggle("active");
   if (burgerIcon.classList.contains("active")) {

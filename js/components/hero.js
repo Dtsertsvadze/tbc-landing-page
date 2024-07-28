@@ -1,4 +1,4 @@
-function createHero() {
+const createHero = () => {
   const heroSection = document.getElementById("hero");
 
   const bannerHtml = createBanner(

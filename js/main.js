@@ -8,4 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
   createPackages();
   createFooter();
   createProducts();
+  createAwards();
 });

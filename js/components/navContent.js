@@ -1,4 +1,4 @@
-function setupNavContent() {
+const setupNavContent = () => {
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach((link) => {
@@ -34,7 +34,7 @@ function handleOutsideClick(e) {
   }
 }
 
-function openContent(contentDiv) {
+const openContent = (contentDiv) => {
   contentDiv.classList.add("active");
   contentDiv.style.display = "block";
   setTimeout(() => {
@@ -42,7 +42,7 @@ function openContent(contentDiv) {
   }, 10);
 }
 
-function closeContent(contentDiv) {
+const closeContent = (contentDiv) => {
   contentDiv.classList.remove("active");
   contentDiv.style.opacity = "0";
   setTimeout(() => {
@@ -50,7 +50,7 @@ function closeContent(contentDiv) {
   }, 200);
 }
 
-function generateContent(contentType) {
+const generateContent = (contentType) => {
   const contentData = {
     products: {
       links: ["პროდუქტების მიმოხილვა", "ნაკრები", "პირადი ბანკირი"],
