@@ -175,6 +175,9 @@
   .offers-wrapper {
     padding: 0 calc((100% - (2 * calc(50% - 20px)) - 20px) / 2);
   }
+  .offers-slider{
+    overflow: visible;
+  }
 
   .offer-item {
     flex: 0 0 calc(40% - 12px);

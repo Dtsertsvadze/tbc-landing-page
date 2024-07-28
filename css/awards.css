@@ -170,7 +170,21 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(35% - 20px);
     flex: 0 0 calc(35% - 20px);
+    -webkit-transition: -webkit-box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   }
+
+  .award-item:hover {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .awards-slider {
+    overflow-x: visible;
+  }
+
 }
 
 @media (max-width: 767px) {
