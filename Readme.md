@@ -42,12 +42,11 @@ This project is a responsive landing page for TBC (TBC Bank), featuring a dynami
 
 ## How to Start the Program
 
-1. Clone the repository:
-2. Navigate to the project directory:
+1. Clone the repository in terminal: git clone https://github.com/Dtsertsvadze/tbc-landing-page.git
+2. Navigate to the project directory: cd tbc-landing-page
 3. Open the `index.html` file in a web browser:
-
-- You can do this by double-clicking the file in your file explorer
-- Or by using a live server(install extension: "Live Server" by Ritwick Dey) and then press go live
-- Or right click on html file and Open With Live Server.
+  - You can do this by double-clicking the file in your file explorer
+  - Or by using a live server(install extension: "Live Server" by Ritwick Dey) and then press go live
+  - Or right click on html file and Open With Live Server.
 
 4. The page should now be running in your default web browser.
