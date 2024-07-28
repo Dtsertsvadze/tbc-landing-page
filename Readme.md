@@ -4,21 +4,21 @@ This project is a responsive landing page for TBC (TBC Bank), featuring a dynami
 
 ## Project Structure
 
--tbc-landing-page
+- tbc-landing-page
 
-  -index.html
-    -styles/
-    -styles.css
-    -styles for every component
-    -scripts/
-    -main.js
-    -components/ components js files (like building blocks)
-    -assets/
-    -images/
-    -(various image)
-    -badges/
-      -(various badges)
-  -README.md
+  - index.html
+    - styles/
+      - styles.css
+      - styles for every component
+    - scripts/
+      - main.js
+      - components/ components js files (like building blocks)
+    - assets/
+      - images/
+        - (various image)
+      - badges/
+        - (various badges)
+  - README.md
 
 ## Technologies Used
 
